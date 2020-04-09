@@ -111,13 +111,13 @@ private:
             case rclcpp_action::ResultCode::SUCCEEDED:
                 break;
             case rclcpp_action::ResultCode::ABORTED:
-                RCLCPP_ERROR(this->get_logger(), "Goal was aborted");
+                RCLCPP_INFO(this->get_logger(), "Goal was aborted");
                 return;
             case rclcpp_action::ResultCode::CANCELED:
-                RCLCPP_ERROR(this->get_logger(), "Goal was canceled");
+                RCLCPP_INFO(this->get_logger(), "Goal was canceled");
                 return;
             default:
-                RCLCPP_ERROR(this->get_logger(), "Unknown result code");
+                RCLCPP_INFO(this->get_logger(), "Unknown result code");
                 return;
         }
 
